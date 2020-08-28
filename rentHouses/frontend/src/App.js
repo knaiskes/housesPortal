@@ -4,6 +4,7 @@ import { Route, Link } from 'react-router-dom'
 
 import  HousesList from './HousesList'
 import './App.css';
+import Footer from './footer'
 
 const BaseLayout = () => (
   <div className="container-fluid">
@@ -30,10 +31,16 @@ const BaseLayout = () => (
 
 class App extends Component {
   render() {
-    return (
+      return (
+	  <div className="App">
       <BrowserRouter>
         <BaseLayout/>
-      </BrowserRouter>
+	    </BrowserRouter>
+
+	    <Footer/>
+	    </div>
+
+
     );
   }
 }
