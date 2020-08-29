@@ -15,7 +15,7 @@ constructor(props) {
 }
 
 componentDidMount() {
-    var  self  =  this;
+    let  self  =  this;
     housesService.getHouses().then(function (result) {
         console.log(result);
         self.setState({ houses:  result.data, nextPageURL:  result.nextlink})
@@ -23,7 +23,7 @@ componentDidMount() {
 }
 
 nextPage(){
-    var  self  =  this;
+    let  self  =  this;
     console.log(this.state.nextPageURL);
     housesService.getHousessByURL(this.state.nextPageURL).then((result) => {
         self.setState({ houses:  result.data, nextPageURL:  result.nextlink})
