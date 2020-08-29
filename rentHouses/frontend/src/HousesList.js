@@ -32,42 +32,30 @@ nextPage(){
 render() {
 
     return (
+	    <div classNameName="housesList">
+	    {this.state.houses.map( c =>
+	     <div class="col-sm-4">
 
-            <div  classNameName="houses--list">
-
-            <table  classNameName="table">
-            <thead  key="thead">
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            {this.state.houses.map( c  =>
-                <tr>
-                <td>  </td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    </td>
-		    <div className="card" >  <div className="card-body">
-		    <img className="card-img-top" src={require('./test.png')} alt="Card image cap" />
-    <h5 className="card-title">Card title</h5>
-		    <p className="card-text">{c.owner}</p>
-		    <a href="#" className="btn btn-primary">See More</a>
-  </div>
-</div>
-            </tr>)}
-            </tbody>
-            </table>
+        <div class="card">
+		    <img class="card-img-top img-fluid" src={require('./test.png')}  alt="Card image cap" />
+          <div class="card-block">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+          </ul>
+          <div class="card-block">
+            <a href="#" class="card-link">Card link</a>
+          </div>
         </div>
+
+      </div>
+
+	    )}
+	    </div>
         );
   }
 }
