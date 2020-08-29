@@ -15,7 +15,7 @@ constructor(props) {
 }
 
 componentDidMount() {
-    var  self  =  this;
+    let  self  =  this;
     housesService.getHouses().then(function (result) {
         console.log(result);
         self.setState({ houses:  result.data, nextPageURL:  result.nextlink})
@@ -23,7 +23,7 @@ componentDidMount() {
 }
 
 nextPage(){
-    var  self  =  this;
+    let  self  =  this;
     console.log(this.state.nextPageURL);
     housesService.getHousessByURL(this.state.nextPageURL).then((result) => {
         self.setState({ houses:  result.data, nextPageURL:  result.nextlink})
@@ -32,29 +32,38 @@ nextPage(){
 render() {
 
     return (
-        <div  className="houses--list">
-            <table  className="table">
+
+            <div  classNameName="houses--list">
+
+            <table  classNameName="table">
             <thead  key="thead">
             <tr>
-                <th>#</th>
-                <th>Owner Name</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Address</th>
-                <th>Description</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
             </tr>
             </thead>
             <tbody>
             {this.state.houses.map( c  =>
-                <tr  key={c.pk}>
-                <td>{c.pk}  </td>
-                <td>{c.owner}</td>
-                <td>{c.phone}</td>
-                <td>{c.email}</td>
-                <td>{c.address}</td>
-                <td>{c.description}</td>
+                <tr>
+                <td>  </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
                 <td>
-                </td>
+                    </td>
+		    <div className="card" >  <div className="card-body">
+		    <img className="card-img-top" src={require('./test.png')} alt="Card image cap" />
+    <h5 className="card-title">Card title</h5>
+		    <p className="card-text">{c.owner}</p>
+		    <a href="#" className="btn btn-primary">See More</a>
+  </div>
+</div>
             </tr>)}
             </tbody>
             </table>

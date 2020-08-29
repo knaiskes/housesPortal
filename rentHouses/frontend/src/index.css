@@ -13,11 +13,39 @@ code {
 }
 
 .footer{
-  margin-top: 1rem;
-  padding: 1rem;
-  background-color: #F1D152;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+    width: 100%;
+    flotat: left;
+    font-size: 20px;
+    height: 2rem;
+    margin-top: 1em;
+    padding: 120px 10px;
+    background-color: #F1D152;
+    color: white;
 }
+
+.navbar {
+    width: 100%;
+    overflow: hidden;
+    background-color: #585858;
+    margin-bottom: 30px;
+    border-top: 5px solid #C9302C;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar li {
+    display: inline;
+    margin: auto;
+}
+
+.navbar a {
+    float: left;
+    font-size: 18px;
+    color: white;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover { font-size: 19px; color: black; background-color: #E3E3E3; }
