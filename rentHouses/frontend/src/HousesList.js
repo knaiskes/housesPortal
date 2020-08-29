@@ -32,42 +32,18 @@ nextPage(){
 render() {
 
     return (
-
-            <div  classNameName="houses--list">
-
-            <table  classNameName="table">
-            <thead  key="thead">
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            {this.state.houses.map( c  =>
-                <tr>
-                <td>  </td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    </td>
-		    <div className="card" >  <div className="card-body">
-		    <img className="card-img-top" src={require('./test.png')} alt="Card image cap" />
-    <h5 className="card-title">Card title</h5>
-		    <p className="card-text">{c.owner}</p>
+	    <div classNameName="housesList" style={{display: 'flex'}}>
+	    {this.state.houses.map( c =>
+		    <div class="card" style={{width: '18rem', margin: '2rem'}}>
+		    <img class="card-img-top" src={require('./test.png')} alt="Card image cap" />
+  <div class="card-body">
+		    <p classNameName="card-text"> {c.address} </p>
 		    <a href="#" className="btn btn-primary">See More</a>
   </div>
 </div>
-            </tr>)}
-            </tbody>
-            </table>
-        </div>
+
+	    )}
+	    </div>
         );
   }
 }
