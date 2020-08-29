@@ -37,7 +37,8 @@ render() {
 		    <div class="card" style={{width: '18rem', margin: '2rem'}}>
 		    <img class="card-img-top" src={require('./test.png')} alt="Card image cap" />
   <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		    <p classNameName="card-text"> {c.address} </p>
+		    <a href="#" className="btn btn-primary">See More</a>
   </div>
 </div>
 
