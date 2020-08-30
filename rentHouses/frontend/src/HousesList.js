@@ -30,7 +30,7 @@ nextPage(){
     });
 }
 render() {
-
+    console.log(this.props);
     return (
 	    <div classNameName="housesList" style={{display: 'flex'}}>
 	    {this.state.houses.map( c =>
