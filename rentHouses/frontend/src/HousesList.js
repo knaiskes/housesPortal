@@ -35,7 +35,7 @@ render() {
 	    <div classNameName="housesList" style={{display: 'flex'}}>
 	    {this.state.houses.map( c =>
 		    <div class="card" style={{width: '18rem', margin: '2rem'}}>
-		    <img class="card-img-top" src={require('./test.png')} alt="Card image cap" />
+		    <img class="card-img-top" src={c.image} alt="Card image cap" />
   <div class="card-body">
 		    <p classNameName="card-text"> {c.address} </p>
 		    <a href="#" className="btn btn-primary">See More</a>
