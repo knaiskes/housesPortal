@@ -38,7 +38,7 @@ render() {
 		    <img class="card-img-top" src={c.image} alt="Card image cap" />
   <div class="card-body">
 		    <p classNameName="card-text"> {c.address} </p>
-		    <a href="#" className="btn btn-primary">See More</a>
+		    <a href={"/houses/" + c.id} className="btn btn-primary">See More</a>
   </div>
 </div>
 
