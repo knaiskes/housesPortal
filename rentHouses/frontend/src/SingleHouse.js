@@ -67,13 +67,6 @@ class  HousesList  extends  Component {
 		</div>
 
 
-
-
-
-
-
-
-
 		<table>
 		<thead>
 		<tr>
