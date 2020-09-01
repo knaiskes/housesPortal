@@ -16,19 +16,19 @@ code {
     width: 100%;
     flotat: left;
     font-size: 20px;
-    height: 2rem;
+    height: 1rem;
     margin-top: 1em;
-    padding: 120px 10px;
-    background-color: #F1D152;
-    color: white;
+    padding: 30px 10px;
+    background-color: #FDFDFD;
+    color: black;
 }
 
 .navbar {
     width: 100%;
     overflow: hidden;
-    background-color: #585858;
+    background-color: #5578bf;
     margin-bottom: 30px;
-    border-top: 5px solid #C9302C;
+    border-top: 2px solid #000000;
 }
 
 .navbar ul {
