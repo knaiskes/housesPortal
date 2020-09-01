@@ -42,6 +42,7 @@ render() {
 		    <div className="container">
 		    <h4><b>{c.address}</b></h4>
 		    <p>{c.owner}</p>
+		    <a href={"/houses/" + c.id} className="btn btn-primary">See More</a>
 		    </div>
 		    </div>
 
