@@ -3,7 +3,9 @@ import React from "react";
 const NavBar = () => (
 	<div className="navbar">
       <ul>
-	<li><a href="#">One</a></li>
+	<li><a href="/">Home</a></li>
+	<li><a href="#">Placeholder</a></li>
+	<li><a href="#">Placeholder</a></li>
      </ul>
     </div>
 );
