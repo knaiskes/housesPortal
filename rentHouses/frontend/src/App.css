@@ -50,7 +50,7 @@ body {
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 #8b9dc3;
+    box-shadow: 0 8px 16px 0 #08819D;
 }
 
 .container {
@@ -58,6 +58,19 @@ body {
 }
 
 .card img {
+    margin: auto;
     width: 80%;
     padding: 20px;
+}
+
+
+.carousel {
+    height: auto;
+
+}
+
+.carousel-inner img {
+    width: auto;
+    height: auto;
+    padding: auto;
 }
