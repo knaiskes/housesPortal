@@ -32,15 +32,18 @@ nextPage(){
 render() {
     console.log(this.props);
     return (
-	    <div classNameName="housesList" style={{display: 'flex'}}>
+	    <div>
 	    {this.state.houses.map( c =>
-		    <div class="card" style={{width: '18rem', margin: '2rem'}}>
-		    <img class="card-img-top" src={c.image} alt="Card image cap" />
-  <div class="card-body">
-		    <p classNameName="card-text"> {c.address} </p>
-		    <a href={"/houses/" + c.id} className="btn btn-primary">See More</a>
-  </div>
-</div>
+
+
+		    <div className="card">
+		    <h2>{c.owner}</h2>
+		    <img src={c.image} alt="House Profile Image"  />
+		    <div className="container">
+		    <h4><b>{c.address}</b></h4>
+		    <p>{c.owner}</p>
+		    </div>
+		    </div>
 
 	    )}
 	    </div>
