@@ -40,7 +40,6 @@ body {
   }
 }
 
-
 .card {
     margin: auto;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -48,6 +47,7 @@ body {
     width: 80%;
     margin-bottom: 50px;
     padding-bottom: 30px;
+    padding-top: 20px;
 }
 
 .card:hover {
