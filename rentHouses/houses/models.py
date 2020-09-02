@@ -12,3 +12,11 @@ class House(models.Model):
 
     def __str__(self):
         return self.owner
+
+
+class HouseImages(models.Model):
+    house = models.ForeignKey(House, default=None, on_delete=models.CASCADE)
+    images = models.ImageField(upload_to=images_dir)
+
+    def __str__(self):
+        return self.house.address

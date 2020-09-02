@@ -4,7 +4,7 @@ from rest_framework.decorators import api_view
 from rest_framework import status
 
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from .models import House
+from .models import House, HouseImages
 from .serializers import *
 
 @api_view(['GET'])
@@ -43,4 +43,16 @@ def houses_detail(request, pk):
 
     if request.method == 'GET':
         serializer = HouseSerializer(house,context={'request': request})
+        return Response(serializer.data)
+
+@api_view(['GET'])
+def house_images(request, pk):
+    try:
+        house = House.objects.get(pk=pk)
+        images = HouseImages.objects.filter(house=house)
+    except House.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = HouseImagesSerializer(images, context={'request': request}, many=True)
         return Response(serializer.data)
