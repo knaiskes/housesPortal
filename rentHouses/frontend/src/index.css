@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-.footer{
+.footer {
     width: 100%;
     flotat: left;
     font-size: 20px;
@@ -21,6 +21,10 @@ code {
     padding: 20px 10px;
     background-color: white;
     color: black;
+}
+
+.footer p {
+    font-size: 12px;
 }
 
 .navbar {
