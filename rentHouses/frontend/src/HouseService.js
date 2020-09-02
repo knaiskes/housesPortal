@@ -18,4 +18,8 @@ export default class HousesService{
         const url = `${API_URL}/api/houses/${pk}`;
         return axios.get(url).then(response => response.data);
     }
+    getHouseImages(pk) {
+        const url = `${API_URL}/api/houses/images/${pk}`;
+        return axios.get(url).then(response => response.data);
+    }
 }
