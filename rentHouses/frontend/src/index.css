@@ -12,15 +12,19 @@ code {
     monospace;
 }
 
-.footer{
+.footer {
     width: 100%;
     flotat: left;
     font-size: 20px;
     height: 1rem;
     margin-top: 1em;
-    padding: 30px 10px;
-    background-color: #FDFDFD;
+    padding: 20px 10px;
+    background-color: white;
     color: black;
+}
+
+.footer p {
+    font-size: 12px;
 }
 
 .navbar {
