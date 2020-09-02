@@ -11,6 +11,7 @@ class  HousesList  extends  Component {
 	super(props);
 	this.state  = {
             houses: [],
+	    images: [],
             nextPageURL:  ''
 	};
 	this.nextPage  =  this.nextPage.bind(this);
@@ -23,6 +24,12 @@ class  HousesList  extends  Component {
             console.log(result);
             self.setState({ houses:  result, nextPageURL:  result.nextlink})
 	});
+
+	housesService.getHouseImages(params.id).then(function (result) {
+	    console.log(result);
+	    self.setState({ images: result})
+	});
+
     }
 
     nextPage(){
@@ -37,8 +44,10 @@ class  HousesList  extends  Component {
 	//    console.log(this.props);
 	//  console.log(this.state.houses.owner);
 	const house = this.state.houses;
+	const images = this.state.images;
 	return (
 		<div>
+
 
 		<div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
 		<ol className="carousel-indicators">
@@ -51,14 +60,16 @@ class  HousesList  extends  Component {
 		<div className="carousel-item active">
 		<img src={house.image} className="d-block img-fluid"  alt="First slide" />
 		</div>
+		{this.state.images.map( c =>
 		<div className="carousel-item">
-		<img src={require('./hackerrank.png')}  className="d-block img-fluid" alt="Second slide" />
+
+		<img src={c.images} alt="House Profile Image"  />
+
 		</div>
-		<div className="carousel-item">
-		<img src={house.image} className="d-block img-fluid" alt="Third slide" />
+		  )}
 		</div>
 		</div>
-		</div>
+
 		<a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
 		<span className="carousel-control-prev-icon" aria-hidden="true"></span>
 		<span className="sr-only">Previous</span>
@@ -72,21 +83,11 @@ class  HousesList  extends  Component {
 
 
 
-		<table>
-		<thead>
-		<tr>
-		<th>Owner</th>
-		<th>Address</th>
-		<th></th>
-		</tr>
-		</thead>
-		<tbody>
-		<tr>
-		<td>{house.owner}</td>
-		<td>{house.address}</td>
-		</tr>
-		</tbody>
-		</table>
+
+
+
+
+
 
 	    </div>
         );
