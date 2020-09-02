@@ -33,29 +33,32 @@ class  HousesList  extends  Component {
 	});
     }
     render() {
+
 	//    console.log(this.props);
 	//  console.log(this.state.houses.owner);
 	const house = this.state.houses;
 	return (
+		<div>
 
 		<div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
 		<ol className="carousel-indicators">
-
 		<li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
 		<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-
-	    </ol>
-
+		<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		</ol>
+		<div className="container">
 		<div className="carousel-inner">
 		<div className="carousel-item active">
-		<img src={house.image} className="d-block w-100" alt="..." />
+		<img src={house.image} className="d-block img-fluid"  alt="First slide" />
 		</div>
-
 		<div className="carousel-item">
-		<img src={require('./hackerrank.png')} className="d-block w-100" alt="..." />
+		<img src={require('./hackerrank.png')}  className="d-block img-fluid" alt="Second slide" />
 		</div>
-
-
+		<div className="carousel-item">
+		<img src={house.image} className="d-block img-fluid" alt="Third slide" />
+		</div>
+		</div>
+		</div>
 		<a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
 		<span className="carousel-control-prev-icon" aria-hidden="true"></span>
 		<span className="sr-only">Previous</span>
@@ -65,6 +68,8 @@ class  HousesList  extends  Component {
 		<span className="sr-only">Next</span>
 		</a>
 		</div>
+
+
 
 
 		<table>
