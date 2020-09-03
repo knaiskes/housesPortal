@@ -56,3 +56,14 @@ def house_images(request, pk):
     if request.method == 'GET':
         serializer = HouseImagesSerializer(images, context={'request': request}, many=True)
         return Response(serializer.data)
+
+@api_view(['GET'])
+def get_owner(request, pk):
+    try:
+        owner = Owner.objects.get(pk=pk)
+    except Owner.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = OwnerSerializer(owner, context={'request': request})
+        return Response(serializer.data)
