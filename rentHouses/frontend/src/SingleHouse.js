@@ -78,12 +78,32 @@ class  HousesList  extends  Component {
 		</a>
 		</div>
 
-
-
-
-
-
-
+<div className="infoTable">
+<table className="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">What?</th>
+      <th scope="col">What?</th>
+      <th scope="col">What?</th>
+      <th scope="col">What?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">okay</td>
+      <td>Okay</td>
+      <td>Okay</td>
+      <td>Okay</td>
+    </tr>
+     <tr>
+      <td scope="row">okay</td>
+      <td>Okay</td>
+      <td>Okay</td>
+      <td>Okay</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 
 
