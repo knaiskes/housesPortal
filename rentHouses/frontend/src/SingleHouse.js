@@ -22,6 +22,9 @@ class  HousesList  extends  Component {
 	const { params } = this.props.match;
 	housesService.getHouse(params.id).then(function (result) {
             console.log(result);
+	    console.log("==============================");
+	    console.log(result.owner.phone);
+	    console.log("==============================");
             self.setState({ houses:  result, nextPageURL:  result.nextlink})
 	});
 
