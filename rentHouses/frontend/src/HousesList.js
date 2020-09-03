@@ -37,11 +37,11 @@ render() {
 
 
 		    <div className="card">
-		    <h2>{c.owner}</h2>
+		    <h2>{c.owner.full_name}</h2>
 		    <img src={c.image} alt="House Profile Image"  />
 		    <div className="container">
 		    <h4><b>{c.address}</b></h4>
-		    <p>{c.owner}</p>
+		    <p>{c.owner.full_name}</p>
 		    <a href={"/houses/" + c.id} className="btn btn-primary">See More</a>
 		    </div>
 		    </div>
