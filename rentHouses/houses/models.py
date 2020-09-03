@@ -2,16 +2,24 @@ from django.db import models
 
 images_dir = 'media/houses/images'
 
-class House(models.Model):
-    owner = models.CharField("Owner Name", max_length=100)
+class Owner(models.Model):
+    full_name = models.CharField("Full Name", max_length=100, unique=True)
     email = models.EmailField()
-    phone = models.CharField("Phone number", max_length=30)
-    address = models.CharField("Address", max_length=100)
+    phone = models.CharField("Phone Number", max_length=50)
+    about_me = models.TextField("About Me", max_length=120)
+    #profile_image = ImageField(upload_to=images_dir)
+
+    def __str__(self):
+        return self.full_name
+
+class House(models.Model):
+    owner = models.ForeignKey(Owner, on_delete=models.CASCADE)
+    address = models.CharField("Address", max_length=100, unique=True)
     description = models.TextField(blank=True, null=True)
     image = models.ImageField(upload_to=images_dir, blank=False, null=False)
 
     def __str__(self):
-        return self.owner
+        return self.address
 
 
 class HouseImages(models.Model):
