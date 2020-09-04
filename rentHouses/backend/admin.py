@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import House, HouseImages, Owner
+from .models import House, HouseImages, Landlord
 
 class HouseImagesAdmin(admin.StackedInline):
     model = HouseImages
@@ -15,5 +15,5 @@ class HouseAdmin(admin.ModelAdmin):
 class HouseImagesAdmin(admin.ModelAdmin):
     pass
 
-admin.site.register(Owner)
+admin.site.register(Landlord)
 #admin.site.register(House)
