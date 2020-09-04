@@ -2,7 +2,7 @@ from django.db import models
 
 images_dir = 'media/houses/images'
 
-class Owner(models.Model):
+class Landlord(models.Model):
     full_name = models.CharField("Full Name", max_length=100, unique=True)
     email = models.EmailField()
     phone = models.CharField("Phone Number", max_length=50)
@@ -13,7 +13,7 @@ class Owner(models.Model):
         return self.full_name
 
 class House(models.Model):
-    owner = models.ForeignKey(Owner, on_delete=models.CASCADE)
+    landlord = models.ForeignKey(Landlord, on_delete=models.CASCADE)
     address = models.CharField("Address", max_length=100, unique=True)
     description = models.TextField(blank=True, null=True)
     image = models.ImageField(upload_to=images_dir, blank=False, null=False)

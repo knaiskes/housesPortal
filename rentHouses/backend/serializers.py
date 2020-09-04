@@ -1,13 +1,13 @@
 from rest_framework import serializers
-from .models import House, HouseImages, Owner
+from .models import House, HouseImages, Landlord
 
-class OwnerSerializer(serializers.ModelSerializer):
+class LandlordSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Owner
+        model = Landlord
         fields = '__all__'
 
 class HouseSerializer(serializers.ModelSerializer):
-    owner = OwnerSerializer(many=False, read_only=True)
+    landlord = LandlordSerializer(many=False, read_only=True)
     class Meta:
         model = House
         fields = '__all__'
@@ -16,4 +16,3 @@ class HouseImagesSerializer(serializers.ModelSerializer):
     class Meta:
         model = HouseImages
         fields = '__all__'
-

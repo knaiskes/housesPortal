@@ -23,7 +23,7 @@ class  HousesList  extends  Component {
 	housesService.getHouse(params.id).then(function (result) {
             console.log(result);
 	    console.log("==============================");
-	    console.log(result.owner.phone);
+	    console.log(result.landlord.phone);
 	    console.log("==============================");
             self.setState({ houses:  result, nextPageURL:  result.nextlink})
 	});
@@ -45,7 +45,7 @@ class  HousesList  extends  Component {
     render() {
 
 	//    console.log(this.props);
-	//  console.log(this.state.houses.owner);
+	//  console.log(this.state.houses.landlord);
 	const house = this.state.houses;
 	const images = this.state.images;
 	return (
