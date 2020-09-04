@@ -79,6 +79,7 @@ class  HousesList  extends  Component {
 		</div>
 
 <div className="infoTable">
+<h3>Information Table</h3>
 <table className="table table-striped">
   <thead>
     <tr>
