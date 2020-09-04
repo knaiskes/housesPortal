@@ -83,24 +83,18 @@ class  HousesList  extends  Component {
 <table className="table table-striped">
   <thead>
     <tr>
-      <th scope="col">What?</th>
-      <th scope="col">What?</th>
-      <th scope="col">What?</th>
-      <th scope="col">What?</th>
+      <th scope="col">Number of rooms</th>
+      <th scope="col">Number of people</th>
+      <th scope="col">Garden</th>
+      <th scope="col">Internet</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td scope="row">okay</td>
-      <td>Okay</td>
-      <td>Okay</td>
-      <td>Okay</td>
-    </tr>
-     <tr>
-      <td scope="row">okay</td>
-      <td>Okay</td>
-      <td>Okay</td>
-      <td>Okay</td>
+      <td scope="row">4</td>
+      <td>5</td>
+      <td>True</td>
+      <td>True</td>
     </tr>
   </tbody>
 </table>
