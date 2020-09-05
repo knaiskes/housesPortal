@@ -12,6 +12,7 @@ class  HousesList  extends  Component {
 	this.state  = {
             houses: [],
 	    images: [],
+	    landlord: [],
             nextPageURL:  ''
 	};
 	this.nextPage  =  this.nextPage.bind(this);
@@ -23,9 +24,9 @@ class  HousesList  extends  Component {
 	housesService.getHouse(params.id).then(function (result) {
             console.log(result);
 	    console.log("==============================");
-	    console.log(result.landlord.phone);
+	    console.log(result.landlord);
 	    console.log("==============================");
-            self.setState({ houses:  result, nextPageURL:  result.nextlink})
+            self.setState({ houses:  result, landlord: result.landlord, nextPageURL:  result.nextlink})
 	});
 
 	housesService.getHouseImages(params.id).then(function (result) {
@@ -48,6 +49,7 @@ class  HousesList  extends  Component {
 	//  console.log(this.state.houses.landlord);
 	const house = this.state.houses;
 	const images = this.state.images;
+	const landlord = this.state.landlord;
 	return (
 		<div>
 
@@ -99,6 +101,9 @@ class  HousesList  extends  Component {
   </tbody>
 </table>
 </div>
+		<address>
+		Contact landlord: <a href={"mailto:" + landlord.email}>{landlord.full_name}</a>
+		</address>
 
 
 
