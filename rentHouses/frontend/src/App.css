@@ -60,6 +60,15 @@ body {
     box-shadow: 0 8px 16px 0 #08819D;
 }
 
+.card p {
+    width: 60%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
     filter: invert(10);

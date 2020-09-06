@@ -53,7 +53,7 @@ class  HousesList  extends  Component {
 	return (
 		<div>
 
-
+	        <h4>{house.address} by {landlord.full_name}</h4>
 		<div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
 		<div className="container">
 		<div className="carousel-inner">
@@ -102,7 +102,7 @@ class  HousesList  extends  Component {
 </table>
 </div>
 		<address>
-		Contact landlord: <a href={"mailto:" + landlord.email}>{landlord.full_name}</a>
+		<h4>Contact landlord: <a href={"mailto:" + landlord.email}>{landlord.full_name}</a></h4>
 		</address>
 
 
