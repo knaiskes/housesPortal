@@ -37,7 +37,7 @@ render() {
 
 
 		    <div className="card">
-		    <h2>{c.address}</h2>
+		    <span><h2>{c.address}</h2> by {c.landlord.full_name} </span>
 		    <img src={c.image} alt="House Profile Image"  />
 		    <p>{c.description}</p>
 		    <div className="container">
