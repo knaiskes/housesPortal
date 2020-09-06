@@ -39,6 +39,7 @@ render() {
 		    <div className="card">
 		    <h2>{c.address}</h2>
 		    <img src={c.image} alt="House Profile Image"  />
+		    <p>{c.description}</p>
 		    <div className="container">
 		    <a href={"/houses/" + c.id} className="btn btn-primary">See More</a>
 		    </div>
