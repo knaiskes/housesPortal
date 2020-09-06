@@ -1,4 +1,13 @@
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
 body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
 }
 .App {
@@ -48,6 +57,12 @@ body {
     margin-bottom: 50px;
     padding-bottom: 30px;
     padding-top: 20px;
+    font-family: "Times New Roman", Times, serif;
+    text-rendering: optimizeLegibility;
+}
+.card h2 {
+    font-weight: bold;
+    font-style: oblique;
 }
 
 .card img {
@@ -67,6 +82,7 @@ body {
     overflow: hidden;
     margin: auto;
     margin-bottom: 5px;
+    font-size: 1.3em;
 }
 
 .carousel-control-next-icon,
