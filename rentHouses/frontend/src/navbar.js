@@ -4,7 +4,7 @@ const NavBar = () => (
 	<div className="navbar">
       <ul>
 	<li><a href="/">Home</a></li>
-	<li><a href="#">Placeholder</a></li>
+	<li><a href="#">Landlords</a></li>
 	<li><a href="#">Placeholder</a></li>
      </ul>
     </div>
