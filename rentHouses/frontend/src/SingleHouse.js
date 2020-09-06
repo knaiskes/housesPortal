@@ -102,7 +102,7 @@ class  HousesList  extends  Component {
 </table>
 </div>
 		<address>
-		Contact landlord: <a href={"mailto:" + landlord.email}>{landlord.full_name}</a>
+		<h4>Contact landlord: <a href={"mailto:" + landlord.email}>{landlord.full_name}</a></h4>
 		</address>
 
 
