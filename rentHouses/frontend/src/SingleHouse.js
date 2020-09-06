@@ -80,6 +80,10 @@ class  HousesList  extends  Component {
 		</a>
 		</div>
 
+               <div className="houseDescription">
+               <p> {house.description} </p>
+               </div>
+
 <div className="infoTable">
 <h3>Information Table</h3>
 <table className="table table-striped">
