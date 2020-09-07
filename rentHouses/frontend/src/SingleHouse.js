@@ -84,9 +84,33 @@ class  HousesList  extends  Component {
                <p> {house.description} </p>
                </div>
 
-<div className="infoTable">
+		<div className="contactForm">
+		<h2>Contact Form</h2>
+
+		<form action="mailto:kiriakosnaiskes@gmail.com" method="post" enctype="text/plain">
+
+		<label for="fname">First Name:</label>
+		<input type="text" id="fname" name="firstname" placeholder="Your name.." />
+
+		<label for="lname">Last Name:</label>
+		<input type="text" id="lname" name="lastname" placeholder="Your last name.." />
+                <label for="arrival">Arrival:</label>
+		<input type="date" id="arrival" name="arrival" />
+
+	        <label for="arrival">Departure:</label>
+		<input type="date" id="departure" name="departure" />
+
+		<label for="subject">Comments</label>
+		<textarea id="comments" name="comments" placeholder="Comments"></textarea>
+
+		<input type="submit" value="Submit" />
+		</form>
+		</div>
+
+
+<div classNameName="infoTable">
 <h3>Information Table</h3>
-<table className="table table-striped">
+<table classNameName="table table-striped">
   <thead>
     <tr>
       <th scope="col">Number of rooms</th>
