@@ -89,21 +89,19 @@ class  HousesList  extends  Component {
 
 		<form action="mailto:kiriakosnaiskes@gmail.com" method="post" enctype="text/plain">
 
-		<label for="fname">First Name:</label>
-		<input type="text" id="fname" name="firstname" placeholder="Your name.." />
+		<input type="text" id="fname" name="firstname" placeholder="First Name" required />
 
-		<label for="lname">Last Name:</label>
-		<input type="text" id="lname" name="lastname" placeholder="Your last name.." />
-                <label for="arrival">Arrival:</label>
-		<input type="date" id="arrival" name="arrival" />
+		<input type="text" id="lname" name="lastname" placeholder="Last Name" required />
 
-	        <label for="arrival">Departure:</label>
-		<input type="date" id="departure" name="departure" />
+		<label for="arrival">Arrival</label>
+		<input type="date" id="arrival" name="arrival" required />
 
-		<label for="subject">Comments</label>
+		<label for="departure">Departure</label>
+		<input type="date" id="departure" name="departure" required />
+
 		<textarea id="comments" name="comments" placeholder="Comments"></textarea>
 
-		<input type="submit" value="Submit" />
+		<input type="submit" value="Send" />
 		</form>
 		</div>
 
