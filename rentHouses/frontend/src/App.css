@@ -113,3 +113,48 @@ h2 {
     font-family: "Times New Roman", Times, serif;
     text-rendering: optimizeLegibility;
 }
+
+.contactForm {
+    width: 70%;
+    margin: auto;
+    border-radius: 5px;
+    background-color: #FAFAFA;
+    padding: 20px;
+}
+
+.contactForm input[type=date] {
+  width: 20%;
+  padding: 12px;
+  border: 1px solid #FAFAFA;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: inline;
+  font-size: 15px;
+}
+
+.contactForm input[type=text], input[type=date], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #FAFAFA;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.contactForm input[type=submit] {
+    width: 50%;
+    background-color: #4343B3;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contactForm input[type=submit]:hover {
+    background-color: #5555BA;
+}
