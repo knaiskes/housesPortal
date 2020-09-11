@@ -58,12 +58,19 @@ def house_images(request, pk):
         return Response(serializer.data)
 
 @api_view(['GET'])
-def get_owner(request, pk):
+def get_landLords(request):
+    landlords_list = Landlord.objects.all()
+    if request.method == 'GET':
+        serializer = LandlordSerializer(landlords_list, context={'request': request}, many=True)
+        return Response(serializer.data)
+
+@api_view(['GET'])
+def get_landlord(request, pk):
     try:
-        owner = Owner.objects.get(pk=pk)
-    except Owner.DoesNotExist:
+        landlord = Landlord.objects.get(pk=pk)
+    except Landlord.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
-        serializer = OwnerSerializer(owner, context={'request': request})
+        serializer = LandlordSerializer(landlord, context={'request': request})
         return Response(serializer.data)
