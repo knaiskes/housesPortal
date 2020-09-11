@@ -62,7 +62,7 @@ def get_landLords(request):
     landlords_list = Landlord.objects.all()
     if request.method == 'GET':
         serializer = LandlordSerializer(landlords_list, context={'request': request}, many=True)
-        return Response(serializer.data)
+        return Response({'data': serializer.data})
 
 @api_view(['GET'])
 def get_landlord(request, pk):
