@@ -22,6 +22,10 @@ export default class HousesService{
         const url = `${API_URL}/api/houses/images/${pk}`;
         return axios.get(url).then(response => response.data);
     }
+    getLandlords() {
+	const url = `${API_URL}/api/houses/landlords/`;
+	return axios.get(url).then(response => response.data);
+    }
     getOwner(pk) {
         const url = `${API_URL}/api/houses/owners/${pk}`;
         return axios.get(url).then(response => response.data);
