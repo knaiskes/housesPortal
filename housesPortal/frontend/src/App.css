@@ -158,3 +158,9 @@ h2 {
 .contactForm input[type=submit]:hover {
     background-color: #5555BA;
 }
+
+.landlordCard {
+    margin-top: 10px;
+    width: 25rem;
+    margin: auto;
+}

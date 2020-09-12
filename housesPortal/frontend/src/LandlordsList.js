@@ -33,13 +33,20 @@ nextPage(){
 render() {
     console.log(this.props);
     return (
-
-	    <div>
+	    <div className="landlordCard">
+	    <h2>Available Landlords</h2>
 	    {this.state.landlords.map( c =>
-		    <h1>{c.email}</h1>
+		    <div className="card">
+		    <h3>{c.full_name}</h3>
+		    <img className="card-img-top" src={require('./test.png')} alt="Card image cap" />
+		    <div className="card-body">
+		    <p className="card-text">{c.about_me}</p>
+		    <a href={"/landlords/" + c.id} className="btn btn-primary">See More</a>
+                    </div>
+		    </div>
 
 	    )}
-	    </div>
+	</div>
         );
   }
 }
