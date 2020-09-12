@@ -38,9 +38,27 @@ class  SingleLandlord  extends  Component {
 	const landlord = this.state.landlord;
 	return (
 		<div>
-
-		<span><h2>{landlord.email}</h2> {landlord.full_name} </span>
-
+		<h2>{landlord.full_name}</h2>
+		<img src={require('./test.png')} alt="Landlord Image" />
+		<p>{landlord.about_me}</p>
+		<table class="table table-striped">
+		<thead>
+		</thead>
+		<tbody>
+		<tr>
+		<th scope="row">Full Name</th>
+		<td>{landlord.full_name}</td>
+		</tr>
+		<tr>
+		<th scope="row">E-mail</th>
+		<td>{landlord.email}</td>
+		</tr>
+		<tr>
+		<th scope="row">Phone Number</th>
+		<td>{landlord.phone}</td>
+		</tr>
+		</tbody>
+		</table>
 	    </div>
         );
     }
