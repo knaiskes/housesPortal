@@ -164,3 +164,26 @@ h2 {
     width: 25rem;
     margin: auto;
 }
+
+.singleLandlord {
+    margin: auto;
+}
+
+.singleLandlord img {
+    vertical-align: middle;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+}
+
+.singleLandlord p {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-style: oblique;
+}
+.singleLandlord h1 {
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
