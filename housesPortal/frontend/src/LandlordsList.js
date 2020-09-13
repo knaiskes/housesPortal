@@ -38,7 +38,7 @@ render() {
 	    {this.state.landlords.map( c =>
 		    <div className="card">
 		    <h3>{c.full_name}</h3>
-		    <img className="card-img-top" src={require('./test.png')} alt="Card image cap" />
+		    <img className="card-img-top" src={c.profile_image} alt="Card image cap" />
 		    <div className="card-body">
 		    <p className="card-text">{c.about_me}</p>
 		    <a href={"/landlords/" + c.id} className="btn btn-primary">See More</a>

@@ -39,7 +39,7 @@ class  SingleLandlord  extends  Component {
 	return (
 		<div className="singleLandlord">
 		<h2>{landlord.full_name}</h2>
-		<img src={require('./test.png')} alt="Landlord Image" />
+		<img src={landlord.profile_image} alt="Landlord Image" />
 		<p>{landlord.about_me}</p>
 		<h1>Information Table</h1>
 		<table class="table table-striped">
