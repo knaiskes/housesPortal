@@ -182,3 +182,8 @@ h2 {
     font-weight: bold;
     font-style: oblique;
 }
+.singleLandlord h1 {
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}

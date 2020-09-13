@@ -41,6 +41,7 @@ class  SingleLandlord  extends  Component {
 		<h2>{landlord.full_name}</h2>
 		<img src={require('./test.png')} alt="Landlord Image" />
 		<p>{landlord.about_me}</p>
+		<h1>Information Table</h1>
 		<table class="table table-striped">
 		<thead>
 		</thead>
