@@ -37,7 +37,7 @@ class  SingleLandlord  extends  Component {
 
 	const landlord = this.state.landlord;
 	return (
-		<div>
+		<div className="singleLandlord">
 		<h2>{landlord.full_name}</h2>
 		<img src={require('./test.png')} alt="Landlord Image" />
 		<p>{landlord.about_me}</p>

@@ -164,3 +164,14 @@ h2 {
     width: 25rem;
     margin: auto;
 }
+
+.singleLandlord {
+    margin: auto;
+}
+
+.singleLandlord img {
+    vertical-align: middle;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+}
