@@ -54,3 +54,14 @@ $ sudo docker-compose up # Start database
 $ npm start housesPortal/frontend # Start frontend
 $ python housesPortal/backend runserver # Start backend
 ```
+
+## API paths
+
+| Path                  | Description                                           |
+|-----------------------|-------------------------------------------------------|
+| houses/               | Returns all the available houses from the database    |
+| houses/<pk>           | Returns the one house with the specified id           |
+| houses/images/<pk>    | Returns all the images for the specified house        |
+| houses/landlords      | Returns all the available landlords from the database |
+| houses/landlords/<pk> | Returns the one landlord with the specified id        |
+
