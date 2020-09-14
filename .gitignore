@@ -4,3 +4,4 @@ venv/
 **/migrations
 *.png
 media/
+postgres-data
