@@ -104,13 +104,6 @@ class  HousesList  extends  Component {
 		<input type="submit" value="Send" />
 		</form>
 		</div>
-
-		<address>
-		<h4>Contact landlord: <a href={"mailto:" + landlord.email}>{landlord.full_name}</a></h4>
-		</address>
-
-
-
 	    </div>
         );
     }
