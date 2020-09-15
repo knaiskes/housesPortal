@@ -37,7 +37,8 @@ render() {
 
 
 		    <div className="card">
-		    <span><h2>{c.address}</h2> by {c.landlord.full_name} </span>
+		    <span><h2>{c.address}</h2> by <a href={"landlords/" + c.id}>
+		    {c.landlord.full_name}</a> </span>
 		    <img src={c.image} alt="House Profile Image"  />
 		    <p>{c.description}</p>
 		    <div className="container">

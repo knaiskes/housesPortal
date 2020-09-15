@@ -104,35 +104,6 @@ class  HousesList  extends  Component {
 		<input type="submit" value="Send" />
 		</form>
 		</div>
-
-
-<div classNameName="infoTable">
-<h3>Information Table</h3>
-<table classNameName="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">Number of rooms</th>
-      <th scope="col">Number of people</th>
-      <th scope="col">Garden</th>
-      <th scope="col">Internet</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td scope="row">4</td>
-      <td>5</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-		<address>
-		<h4>Contact landlord: <a href={"mailto:" + landlord.email}>{landlord.full_name}</a></h4>
-		</address>
-
-
-
 	    </div>
         );
     }
