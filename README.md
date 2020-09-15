@@ -40,6 +40,13 @@ $ source venv/bin/activate
 $ pip install -r requirements.txt
 ```
 
+Migrate database models
+
+```
+$ python housesPortal/manage.py makemigrations
+$ python housesPortal/manage.py migrate
+```
+
 Install ReactJS - frontend dependencies
 
 ```
