@@ -5,6 +5,10 @@ A Web application for promoting houses online.
 The backend of the project is written in Python (Django) while the
 frontend is written in ReactJS and Bootstrap 4.
 
+## Video Overview
+[![housesPortal Video Overview](https://img.youtube.com/vi/FVt9nDfa648/0.jpg)](https://www.youtube.com/watch?v=FVt9nDfa648)
+
+
 ## Dependencies
 
 - Python 3.x
