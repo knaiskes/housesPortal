@@ -22,15 +22,10 @@ class  HousesList  extends  Component {
 	let  self  =  this;
 	const { params } = this.props.match;
 	housesService.getHouse(params.id).then(function (result) {
-            console.log(result);
-	    console.log("==============================");
-	    console.log(result.landlord);
-	    console.log("==============================");
             self.setState({ houses:  result, landlord: result.landlord, nextPageURL:  result.nextlink})
 	});
 
 	housesService.getHouseImages(params.id).then(function (result) {
-	    console.log(result);
 	    self.setState({ images: result})
 	});
 
@@ -38,15 +33,11 @@ class  HousesList  extends  Component {
 
     nextPage(){
 	let  self  =  this;
-	console.log(this.state.nextPageURL);
 	housesService.getHousessByURL(this.state.nextPageURL).then((result) => {
             self.setState({ houses:  result.data, nextPageURL:  result.nextlink})
 	});
     }
     render() {
-
-	//    console.log(this.props);
-	//  console.log(this.state.houses.landlord);
 	const house = this.state.houses;
 	const images = this.state.images;
 	const landlord = this.state.landlord;
