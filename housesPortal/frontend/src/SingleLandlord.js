@@ -20,7 +20,6 @@ class  SingleLandlord  extends  Component {
 	let  self  =  this;
 	const { params } = this.props.match;
 	housesService.getLandlord(params.id).then(function (result) {
-            console.log(result);
             self.setState({ landlord:  result, nextPageURL:  result.nextlink})
 	});
 
@@ -28,7 +27,6 @@ class  SingleLandlord  extends  Component {
 
     nextPage(){
 	let  self  =  this;
-	console.log(this.state.nextPageURL);
 	housesService.getHousessByURL(this.state.nextPageURL).then((result) => {
             self.setState({ houses:  result.data, nextPageURL:  result.nextlink})
 	});

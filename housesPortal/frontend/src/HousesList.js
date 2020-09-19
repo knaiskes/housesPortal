@@ -17,20 +17,17 @@ constructor(props) {
 componentDidMount() {
     let  self  =  this;
     housesService.getHouses().then(function (result) {
-        console.log(result);
         self.setState({ houses:  result.data, nextPageURL:  result.nextlink})
     });
 }
 
 nextPage(){
     let  self  =  this;
-    console.log(this.state.nextPageURL);
     housesService.getHousessByURL(this.state.nextPageURL).then((result) => {
         self.setState({ houses:  result.data, nextPageURL:  result.nextlink})
     });
 }
 render() {
-    console.log(this.props);
     return (
 	    <div>
 	    {this.state.houses.map( c =>

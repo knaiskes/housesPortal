@@ -17,21 +17,18 @@ constructor(props) {
 componentDidMount() {
     let  self  =  this;
     housesService.getLandlords().then(function (result) {
-        console.log(result);
         self.setState({ landlords:  result.data, nextPageURL:  result.nextlink})
     });
 }
 
 nextPage(){
     let  self  =  this;
-    console.log(this.state.nextPageURL);
     housesService.getHousessByURL(this.state.nextPageURL).then((result) => {
         self.setState({ landlords:  result.data, nextPageURL:  result.nextlink})
     });
 }
 
 render() {
-    console.log(this.props);
     return (
 	    <div className="landlordCard">
 	    <h2>Available Landlords</h2>
