@@ -62,7 +62,7 @@ $ npm install
 
 ```
 $ sudo docker-compose up # Start database
-$ npm start housesPortal/frontend # Start frontend
+$ cd housesPortal/frontend/src && npm start # Start frontend
 $ python housesPortal/backend runserver # Start backend
 ```
 
